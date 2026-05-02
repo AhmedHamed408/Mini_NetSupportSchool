@@ -25,6 +25,8 @@ from PyQt5.QtWidgets import (
 )
 
 
+# PERSON 4 OWNERSHIP (student exam runtime side):
+# Student navigation, answer tracking, submit, and realtime progress updates.
 class ExamWindow(QMainWindow):
     def __init__(self, payload: dict, stop_signal_path: str = ""):
         super().__init__()
