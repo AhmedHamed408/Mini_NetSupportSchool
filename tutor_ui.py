@@ -1,4 +1,4 @@
-#  Add exam configuration action section (start/lock/unlock)
+#  Add students table UI and basic rendering of fetched students
 import sys
 
 import qtawesome as qta
@@ -10,6 +10,8 @@ from PyQt5.QtWidgets import (
     QMainWindow,
     QMessageBox,
     QPushButton,
+    QTableWidget,
+    QTableWidgetItem,
     QVBoxLayout,
     QWidget,
 )
@@ -25,6 +27,7 @@ class MainWindow(QMainWindow):
         self.students_cache = []
         self.exams_cache = []
         self._build_ui()
+        self.refresh_data()
 
     def _build_ui(self):
         self.setWindowTitle("NetSupport School - Tutor")
@@ -54,6 +57,10 @@ class MainWindow(QMainWindow):
         title = QLabel("لوحة التحكم")
         content.addWidget(title)
 
+        self.table = QTableWidget(0, 4)
+        self.table.setHorizontalHeaderLabels(["اسم الطالب", "الجهاز", "الحالة", "إجراء"])
+        content.addWidget(self.table)
+
         actions = QHBoxLayout()
         self.btn_start = self._action_btn("بدء امتحان", "#27ae60", "fa5s.play")
         self.btn_lock = self._action_btn("قفل الأجهزة", "#2980b9", "fa5s.lock")
@@ -62,7 +69,6 @@ class MainWindow(QMainWindow):
         actions.addWidget(self.btn_lock)
         actions.addWidget(self.btn_unlock)
         content.addLayout(actions)
-        content.addStretch()
 
         self.btn_lock.clicked.connect(lambda: self.send_bulk_command("lock"))
         self.btn_unlock.clicked.connect(lambda: self.send_bulk_command("unlock"))
@@ -101,12 +107,29 @@ class MainWindow(QMainWindow):
         )
         return b
 
+    def refresh_data(self):
+        try:
+            self.students_cache = self.api.list_students()
+            self.exams_cache = self.api.list_exams()
+            self.render_students()
+        except Exception as ex:
+            self.statusBar().showMessage(f"تعذر الاتصال بالخادم: {ex}")
+
+    def render_students(self):
+        self.table.setRowCount(len(self.students_cache))
+        for row, student in enumerate(self.students_cache):
+            self.table.setItem(row, 0, QTableWidgetItem(student.get("student_name", "")))
+            self.table.setItem(row, 1, QTableWidgetItem(student.get("machine_name", "")))
+            self.table.setItem(row, 2, QTableWidgetItem(student.get("status", "")))
+            self.table.setItem(row, 3, QTableWidgetItem(""))
+
     def send_bulk_command(self, cmd):
         try:
             if cmd == "lock":
                 self.api.lock([])
             elif cmd == "unlock":
                 self.api.unlock([])
+            self.refresh_data()
         except Exception as ex:
             QMessageBox.warning(self, "خطأ", str(ex))
 
