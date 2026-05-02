@@ -1,0 +1,117 @@
+[2026-04-29 22:34:11] Connected to backend: ws://127.0.0.1:8000/ws/student/student-6c0e775c?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 22:34:45] Received command: start_exam
+[2026-04-29 22:34:45] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 22:39:35] Connected to backend: ws://127.0.0.1:8000/ws/student/student-f7ae3bce?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 22:39:58] Received command: start_exam
+[2026-04-29 22:39:58] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 22:43:38] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-29 22:43:42] Connected to backend: ws://127.0.0.1:8000/ws/student/student-f7ae3bce?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 22:43:50] Received command: start_exam
+[2026-04-29 22:43:50] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 22:58:10] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-29 22:58:40] Connected to backend: ws://127.0.0.1:8000/ws/student/student-6e860e21?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:01:11] Received command: start_exam
+[2026-04-29 23:01:11] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 23:14:49] Connected to backend: ws://127.0.0.1:8000/ws/student/student-13f408da?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:15:08] Received command: start_exam
+[2026-04-29 23:15:08] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 23:22:13] Connected to backend: ws://127.0.0.1:8000/ws/student/student-377e0621?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:22:48] Received command: start_exam
+[2026-04-29 23:22:48] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 23:24:27] Received command: start_exam
+[2026-04-29 23:24:27] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 23:27:09] Connected to backend: ws://127.0.0.1:8000/ws/student/student-576697b1?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:27:34] Received command: start_exam
+[2026-04-29 23:27:34] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 23:28:10] Received command: start_exam
+[2026-04-29 23:28:10] Launching exam window: D:\Net Support School\student_client\exam_session.py
+[2026-04-29 23:33:19] Connected to backend: ws://127.0.0.1:8000/ws/student/student-eb50f240?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:37:49] Connected to backend: ws://127.0.0.1:8000/ws/student/student-d133e919?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:41:59] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:42:18] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:42:45] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-29 23:42:54] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=DESKTOP-UC0VT5C
+[2026-04-30 17:18:54] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:19:13] Received command: start_exam
+[2026-04-30 17:19:13] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-04-30 17:21:18] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:32:42] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-30 17:32:45] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:32:51] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-30 17:32:54] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:32:55] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-30 17:32:58] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:33:00] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-30 17:33:03] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:33:37] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-30 17:33:40] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:33:47] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-30 17:33:50] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:33:56] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-04-30 17:35:11] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=Student+Demo&machine_name=LAPTOP-DL0VUGOH
+[2026-04-30 17:37:03] Received command: request_login
+[2026-05-01 16:02:37] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:02:52] Received command: request_login
+[2026-05-01 16:03:43] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:03:52] Received command: start_exam
+[2026-05-01 16:03:52] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-05-01 16:04:57] Received command: stop_exam
+[2026-05-01 16:04:57] Stopping exam process by tutor command.
+[2026-05-01 16:05:27] Received command: start_exam
+[2026-05-01 16:05:27] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-05-01 16:06:56] Received command: start_exam
+[2026-05-01 16:06:56] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-05-01 16:07:16] Received command: start_exam
+[2026-05-01 16:07:16] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-05-01 16:07:40] Received command: stop_exam
+[2026-05-01 16:07:40] Stopping exam process by tutor command.
+[2026-05-01 16:08:27] Received command: start_exam
+[2026-05-01 16:08:28] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-05-01 16:15:12] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:15:15] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:15:18] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:15:21] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:16:02] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:16:12] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:16:28] Received command: request_login
+[2026-05-01 16:17:24] Connection error: [WinError 1225] The remote computer refused the network connection
+[2026-05-01 16:17:27] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:17:38] Received command: start_exam
+[2026-05-01 16:17:38] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-05-01 16:18:05] Received command: stop_exam
+[2026-05-01 16:18:05] Stop exam requested by tutor; asking exam window to submit and close.
+[2026-05-01 16:18:11] Exam window did not close in time; forcing terminate.
+[2026-05-01 16:21:14] Received command: start_exam
+[2026-05-01 16:21:14] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-05-01 16:21:33] Received command: start_exam
+[2026-05-01 16:21:33] Launching exam window: D:\tempooo\student_client\exam_session.py
+[2026-05-01 16:23:53] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:23:57] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:23:58] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:24:01] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:24:12] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:24:15] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:24:15] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:24:18] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:24:26] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:24:29] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:24:43] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:24:55] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:25:18] Received command: request_login
+[2026-05-01 16:25:56] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:28:30] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:28:35] Connection error: [WinError 1225] The remote computer refused the network connection
+[2026-05-01 16:28:40] Connection error: [WinError 1225] The remote computer refused the network connection
+[2026-05-01 16:28:45] Connection error: [WinError 1225] The remote computer refused the network connection
+[2026-05-01 16:28:50] Connection error: [WinError 1225] The remote computer refused the network connection
+[2026-05-01 16:28:55] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:30:51] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:30:54] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:40:48] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:40:51] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:41:11] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:41:14] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:41:22] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:41:25] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
+[2026-05-01 16:42:50] Connection error: received 1012 (service restart); then sent 1012 (service restart)
+[2026-05-01 16:42:53] Connected to backend: ws://127.0.0.1:8000/ws/student/student-desktop-uc0vt5c?student_name=&machine_name=LAPTOP-DL0VUGOH
