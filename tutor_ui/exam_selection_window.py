@@ -1,15 +1,20 @@
-# Hero header + Card with exam QComboBox and duration QSpinBox (QFormLayout).
+# Students Card — QListWidget rows with QCheckBox + name/machine labels per student.
 from typing import List
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (
+    QCheckBox,
     QComboBox,
     QDialog,
     QFormLayout,
     QFrame,
+    QHBoxLayout,
     QLabel,
+    QListWidget,
+    QListWidgetItem,
     QSpinBox,
     QVBoxLayout,
+    QWidget,
 )
 
 
@@ -62,5 +67,42 @@ class ExamSelectionDialog(QDialog):
 
         config_layout.addLayout(form)
         layout.addWidget(config_card)
+
+        students_card = QFrame()
+        students_card_layout = QVBoxLayout(students_card)
+        students_card_layout.setContentsMargins(12, 12, 12, 12)
+        students_card_layout.setSpacing(10)
+        students_card_layout.addWidget(QLabel("قائمة الطلاب"))
+
+        self.students_list = QListWidget()
+        self.students_list.setAlternatingRowColors(True)
+        for student in self.students:
+            item = QListWidgetItem(self.students_list)
+            row_widget = QWidget()
+            row_widget.setMinimumHeight(52)
+            row_layout = QHBoxLayout(row_widget)
+            row_layout.setContentsMargins(10, 6, 10, 6)
+            row_layout.setSpacing(10)
+            display_name = (student.get("student_name") or "").strip() or "بدون اسم"
+            machine_name = student.get("machine_name", "")
+            checkbox = QCheckBox("")
+            checkbox.setChecked(False)
+            checkbox.setProperty("student_id", student.get("student_id"))
+            name_label = QLabel(display_name)
+            machine_label = QLabel(machine_name or "جهاز غير معروف")
+            identity_col = QVBoxLayout()
+            identity_col.setContentsMargins(0, 0, 0, 0)
+            identity_col.setSpacing(1)
+            identity_col.addWidget(name_label)
+            identity_col.addWidget(machine_label)
+            row_layout.addWidget(checkbox)
+            row_layout.addLayout(identity_col)
+            row_layout.addStretch()
+            item.setSizeHint(row_widget.sizeHint())
+            self.students_list.addItem(item)
+            self.students_list.setItemWidget(item, row_widget)
+
+        students_card_layout.addWidget(self.students_list)
+        layout.addWidget(students_card)
 
         self.setLayout(layout)
