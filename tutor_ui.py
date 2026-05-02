@@ -1,4 +1,4 @@
-#  Add students table UI and basic rendering of fetched students
+# Add student row action buttons and connected-only selection logic
 import sys
 
 import qtawesome as qta
@@ -26,6 +26,7 @@ class MainWindow(QMainWindow):
         self.api = TutorApiClient()
         self.students_cache = []
         self.exams_cache = []
+        self.connected_only_mode = False
         self._build_ui()
         self.refresh_data()
 
@@ -57,6 +58,9 @@ class MainWindow(QMainWindow):
         title = QLabel("لوحة التحكم")
         content.addWidget(title)
 
+        self.btn_connected_only = QPushButton("عرض المتصلين فقط")
+        content.addWidget(self.btn_connected_only)
+
         self.table = QTableWidget(0, 4)
         self.table.setHorizontalHeaderLabels(["اسم الطالب", "الجهاز", "الحالة", "إجراء"])
         content.addWidget(self.table)
@@ -73,6 +77,7 @@ class MainWindow(QMainWindow):
         self.btn_lock.clicked.connect(lambda: self.send_bulk_command("lock"))
         self.btn_unlock.clicked.connect(lambda: self.send_bulk_command("unlock"))
         self.btn_start.clicked.connect(self.open_exam_selection)
+        self.btn_connected_only.clicked.connect(self.toggle_connected_only)
 
         content_widget = QWidget()
         content_widget.setLayout(content)
@@ -116,12 +121,52 @@ class MainWindow(QMainWindow):
             self.statusBar().showMessage(f"تعذر الاتصال بالخادم: {ex}")
 
     def render_students(self):
-        self.table.setRowCount(len(self.students_cache))
-        for row, student in enumerate(self.students_cache):
+        students = self.students_cache
+        if self.connected_only_mode:
+            students = [s for s in self.students_cache if s.get("status") == "online"]
+
+        self.table.setRowCount(len(students))
+        for row, student in enumerate(students):
             self.table.setItem(row, 0, QTableWidgetItem(student.get("student_name", "")))
             self.table.setItem(row, 1, QTableWidgetItem(student.get("machine_name", "")))
-            self.table.setItem(row, 2, QTableWidgetItem(student.get("status", "")))
-            self.table.setItem(row, 3, QTableWidgetItem(""))
+
+            is_online = student.get("status") == "online"
+            status_label = QLabel("● متصل" if is_online else "● غير متصل")
+            status_label.setStyleSheet("color: green;" if is_online else "color: red;")
+            self.table.setCellWidget(row, 2, status_label)
+
+            action = QPushButton()
+            locked = bool(student.get("locked"))
+            action.setIcon(qta.icon("fa5s.unlock" if locked else "fa5s.lock", color="white"))
+            action.setProperty("student_id", student.get("student_id"))
+            action.clicked.connect(self.toggle_lock_from_button)
+            self.table.setCellWidget(row, 3, action)
+
+    def toggle_connected_only(self):
+        self.connected_only_mode = not self.connected_only_mode
+        if self.connected_only_mode:
+            self.btn_connected_only.setText("عرض كل الطلاب")
+        else:
+            self.btn_connected_only.setText("عرض المتصلين فقط")
+        self.refresh_data()
+
+    def toggle_lock_from_button(self):
+        sender = self.sender()
+        student_id = sender.property("student_id") if sender else None
+        if not student_id:
+            return
+
+        student = next((s for s in self.students_cache if s.get("student_id") == student_id), None)
+        is_locked = bool(student.get("locked")) if student else False
+
+        try:
+            if is_locked:
+                self.api.unlock([student_id])
+            else:
+                self.api.lock([student_id])
+            self.refresh_data()
+        except Exception as ex:
+            QMessageBox.warning(self, "خطأ", str(ex))
 
     def send_bulk_command(self, cmd):
         try:
