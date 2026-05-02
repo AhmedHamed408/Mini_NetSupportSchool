@@ -1,4 +1,4 @@
-# Students Card — QListWidget rows with QCheckBox + name/machine labels per student.
+# Selection helpers, Start/Cancel buttons, validation, result_payload / accept().
 from typing import List
 
 from PyQt5.QtCore import Qt
@@ -12,6 +12,8 @@ from PyQt5.QtWidgets import (
     QLabel,
     QListWidget,
     QListWidgetItem,
+    QMessageBox,
+    QPushButton,
     QSpinBox,
     QVBoxLayout,
     QWidget,
@@ -105,4 +107,45 @@ class ExamSelectionDialog(QDialog):
         students_card_layout.addWidget(self.students_list)
         layout.addWidget(students_card)
 
+        actions = QHBoxLayout()
+        start_btn = QPushButton("بدء")
+        cancel_btn = QPushButton("إلغاء")
+        start_btn.clicked.connect(self._start)
+        cancel_btn.clicked.connect(self.reject)
+        actions.addWidget(start_btn)
+        actions.addWidget(cancel_btn)
+        layout.addLayout(actions)
+
         self.setLayout(layout)
+
+    def _all_checkboxes(self) -> List[QCheckBox]:
+        checkboxes = []
+        for i in range(self.students_list.count()):
+            widget = self.students_list.itemWidget(self.students_list.item(i))
+            if not widget:
+                continue
+            checkbox = widget.findChild(QCheckBox)
+            if checkbox:
+                checkboxes.append(checkbox)
+        return checkboxes
+
+    def _selected_student_ids(self):
+        ids = []
+        for checkbox in self._all_checkboxes():
+            if checkbox and checkbox.isChecked():
+                ids.append(checkbox.property("student_id"))
+        return ids
+
+    def _start(self):
+        selected = self._selected_student_ids()
+        if not selected:
+            QMessageBox.warning(self, "تنبيه", "اختر طالبا واحدا على الأقل")
+            return
+        exam_data = self.exam_combo.currentData()
+        self.result_payload = {
+            "exam_id": exam_data.get("exam_id"),
+            "exam_title": exam_data.get("title"),
+            "duration_minutes": int(self.duration_input.value()),
+            "student_ids": selected,
+        }
+        self.accept()
