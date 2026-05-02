@@ -1,3 +1,4 @@
+#  Add exam configuration action section (start/lock/unlock)
 import sys
 
 import qtawesome as qta
