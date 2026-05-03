@@ -1,0 +1,22 @@
+{
+  "exam_id": "exam-math-1",
+  "title": "Math Basics",
+  "duration_minutes": 20,
+  "questions": [
+    {
+      "question": "2 + 2 = ?",
+      "options": ["3", "4", "5", "6"],
+      "correct_answer": 1
+    },
+    {
+      "question": "5 * 3 = ?",
+      "options": ["8", "10", "15", "20"],
+      "correct_answer": 2
+    },
+    {
+      "question": "9 - 4 = ?",
+      "options": ["5", "6", "7", "8"],
+      "correct_answer": 0
+    }
+  ]
+}

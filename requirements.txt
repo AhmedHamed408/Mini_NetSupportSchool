@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+websockets
+requests
+PyQt5
+qtawesome
